@@ -2,34 +2,56 @@ import React from 'react';
 import './styles.css';
 
 import whatsappIcon from '../../assets/images/icons/whatsapp.svg';
+import api from '../../services/api';
 
-function TeacherItem() {
+export interface Teacher {
+    id: number;
+    avatar: string;
+    bio: string;
+    cost: number;
+    name: string;
+    subject: string;
+    whatsapp: string;
+}
+
+interface TeacherItemProps {
+    teacher: Teacher;
+}
+
+const TeacherItem: React.FC<TeacherItemProps> = ({ teacher }) => {
+
+    function createNewConnection() {
+        api.post('connections', {
+            user_id: teacher.id
+        })
+    }
     return (
         <article className="teacher-item">
             <header>
-                <img src="https://avatars2.githubusercontent.com/u/8571289?s=460&u=9558359bd39d5b0700ef42296cf0cce9fc89d922&v=4" alt="Carolina Vero" />
+                <img src={teacher.avatar} alt={teacher.name} />
                 <div>
-                    <strong>Carolina Vero</strong>
-                    <span>JavaScript</span>
+                    <strong>{teacher.name}</strong>
+                    <span>{teacher.subject}</span>
                 </div>
             </header>
 
             <p>
-                My name is Carolina Vero from Brazil.
-                I've been working as Front-End Developer since 2015 at W42 - Tecnologia.
-                <br />
-                I'm currently learning about JavaScript and ReactJS.
+               {teacher.bio}
             </p>
 
             <footer>
                 <p>
                     Preço/hora
-                    <strong>R$ 80,00</strong>
+                    <strong>R$ {teacher.cost}</strong>
                 </p>
-                <button type="button">
+                <a 
+                    target="_blank" 
+                    href={`https://wa.me/${teacher.whatsapp}`} 
+                    onClick={createNewConnection}
+                >
                     <img src={whatsappIcon} alt="Whatsapp" />
                     Entrar em contato
-                </button>
+                </a>
             </footer>
         </article>
     );
