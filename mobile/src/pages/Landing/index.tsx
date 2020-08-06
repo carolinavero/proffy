@@ -51,7 +51,7 @@ function Landing() {
 
             <Text style={styles.totalConnections}>
                 Total de 200 conexões já realizadas {' '}
-                <Image source={heartIcon} />
+                <Image source={heartIcon}  style={styles.heartIcon} />
             </Text>
 
         </View>

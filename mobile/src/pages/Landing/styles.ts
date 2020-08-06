@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
         color: '#fff',
         fontSize: 20,
         lineHeight: 30,
-        marginTop: 40,
+        marginTop: 10,
     },
 
     titleBold: {
@@ -62,6 +62,10 @@ const styles = StyleSheet.create({
         lineHeight: 20,
         maxWidth: 140,
         marginTop: 40,
+        marginBottom: 40
+    },
+    heartIcon: {
+        maxWidth: 20
     }
 });
 

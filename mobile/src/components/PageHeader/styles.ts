@@ -17,6 +17,12 @@ const styles = StyleSheet.create({
         lineHeight: 32,
         maxWidth: 160,
         marginVertical: 40,
+    },
+    logo: {
+        maxWidth: 40
+    },
+    backIcon: {
+        maxWidth: 30
     }
 });
 

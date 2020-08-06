@@ -25,10 +25,10 @@ const PageHeader: React.FC<PageHeaderProps> = ({ title }) => {
              <View style={styles.topBar}>
 
                 <BorderlessButton onPress={handleGoBack}>
-                    <Image source={backIcon} resizeMode="contain" />
+                    <Image source={backIcon} resizeMode="contain" style={styles.backIcon} />
                 </BorderlessButton>
 
-                <Image source={logoImg} resizeMode="contain"  />
+                <Image source={logoImg} resizeMode="contain" style={styles.logo} />
 
              </View>
 
