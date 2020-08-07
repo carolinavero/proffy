@@ -5,12 +5,12 @@ const styles = StyleSheet.create({
         backgroundColor: '#173d7a',
         flex: 1,
         justifyContent: 'center',
-        padding: 40
+        padding: 30
     },
 
     banner: {
         width: '100%',
-        resizeMode: 'contain'
+        resizeMode: 'contain',
     },
 
     title: {

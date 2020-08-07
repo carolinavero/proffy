@@ -2,7 +2,8 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
     container: {
-        padding: 40,
+        paddingVertical: 10,
+        paddingHorizontal: 40,
         backgroundColor: '#173d7a',
     },
     topBar: {
@@ -16,13 +17,18 @@ const styles = StyleSheet.create({
         fontSize: 24,
         lineHeight: 32,
         maxWidth: 160,
-        marginVertical: 40,
+        marginBottom: 20,
     },
     logo: {
         maxWidth: 40
     },
     backIcon: {
         maxWidth: 30
+    },
+    header: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
     }
 });
 
