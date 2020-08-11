@@ -12,6 +12,8 @@
 
 #page-landing-content {
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 #logo-container img {
@@ -98,18 +100,47 @@
 
 @media (min-width: 1100px) {
     #page-landing-content {
-        max-width: 1100px;
+        max-width: 100vw;
         text-align: left;
 
-        display: grid;
-        grid-template-rows: 350px 1fr;
-        grid-template-columns: 2fr 1fr 1fr;
-        grid-template-areas: 
-        "logo hero hero" 
-        "buttons buttons total"
+        display: flex;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
+    #page-landing-content .page-landing__description {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        height: 70vh;
+        width: 80vw;
+    }
+    #page-landing-content .page-landing__actions {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--color-background);
+        width: 100vw;
+        height: 30vh;
+        color: var(--color-primary);
+    }
+
+    #page-landing-content .page-landing__actions .page-landing__actions-content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 80vw;
+    }
+    .page-landing__actions .welcome-message {
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+
+
     .logo-container {
-        grid-area: logo;
         align-self: center;
         margin: 0;
         text-align: left;
@@ -123,18 +154,15 @@
         
     }
     .hero-image{
-        grid-area: hero;
-        justify-self: end;
+      justify-self: end;
     }
     .buttons-container {
-        grid-area: buttons;
         justify-content: flex-start;
     }
     .buttons-container a {
         font-size: 2.4rem;
     }
     .total-connections {
-        grid-area: total;
-        justify-self: end;
+        text-align: right;
     }
 }

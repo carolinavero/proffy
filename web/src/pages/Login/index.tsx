@@ -48,20 +48,21 @@ function Login() {
 
                         </fieldset>
                         <footer>
-                            <p>
+                            <div className="footer__content">
                                 <Input
                                     name="remember"
                                     type="checkbox"
                                     defaultValue={remember}
+                                    className="input-checkbox"
                                     label="Lembrar-me"
                                     onChange={e => setRemember(e.target.value)}
                                 />
+                                <Link to="/forgot-password">
+                                    Esqueci a senha
+                                </Link>
                                 
-                            </p>
-                            <Link to="/forgot-password">
+                            </div>
                             
-                                Esqueci a senha
-                            </Link>
                             
                             <button type="submit">
                                 Entrar
@@ -70,7 +71,7 @@ function Login() {
                         </footer>
                     </form>
 
-                    <div className="footer-info">
+                    <div className="footer__info">
                         <p>
                             Não tem conta? <br></br>
                             <Link to="/register">

@@ -37,4 +37,6 @@ input[type="checkbox"] {
     border: none;
     display: flex;
     flex-direction: row;
+    margin: 0 5px 0 0;
 }
+

@@ -6,6 +6,7 @@ import TeacherList from './pages/TeacherList';
 import Register from './pages/Register';
 import Login from './pages/Login';
 import ForgotPassword from './pages/ForgotPassword';
+import SuccessMessage from './pages/SuccessMessage';
 
 function Routes() {
     return (
@@ -16,6 +17,7 @@ function Routes() {
             <Route path="/login" component={Login} />
             <Route path="/register" component={Register} />
             <Route path="/forgot-password" component={ForgotPassword} />
+            <Route path="/success-message" component={SuccessMessage} />
         </BrowserRouter>
     )
 }

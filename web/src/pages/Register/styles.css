@@ -1,4 +1,4 @@
-#page-login {
+#page-register {
     width: 100vw;
     display: flex;
     height: 100vh;
@@ -6,7 +6,7 @@
     justify-content: space-around;
 }
 
-#page-login .login__description {
+#page-register .register__description {
     background-color: var(--color-primary);
     color: #fff;
     flex: 1;
@@ -16,12 +16,12 @@
     justify-content: center;
     align-items: center;
 }
-#page-login .login__description h2 {
+#page-register .register__description h2 {
     margin-top: 2rem;
     max-width: 30rem;
 }
 
-#page-login .login__form {
+#page-register .register__form {
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -30,10 +30,10 @@
     flex: 1;
     font-size: 1.4rem;
 }   
-#page-login main {
+#page-register main {
     min-width: 25vw;
 }
-#page-login main button {
+#page-register main button {
     width: 100%;
     height: 5.6rem;
     background-color: var(--color-secondary);
@@ -49,29 +49,29 @@
     transition: all ease .2s;
     margin-top: 3.2rem;
 }
-#page-login main button:hover {
+#page-register main button:hover {
     color: var(--color-secondary-dark);
 }
 
-#page-login main fieldset {
+#page-register main fieldset {
     border: 0;
     padding: 2.4rem 0;
 }
 
-#page-login .footer__info {
+#page-register .footer__info {
     padding-top: 2rem;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
 }
-#page-login .footer__content {
+#page-register .footer__content {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-#page-login .footer__content .input-block:first-child{
+#page-register .footer__content .input-block:first-child{
     width: auto;
     display: flex;
     flex-direction: row-reverse;
@@ -79,7 +79,7 @@
     justify-content: flex-end;
 }
 
-#page-login a {
+#page-register a {
     text-decoration: none;
     color: var(--color-primary);
     opacity: 1;
@@ -87,6 +87,6 @@
     font-size: 1.4rem;
 }
 
-#page-login a:hover {
+#page-register a:hover {
     opacity: .8;
 }
