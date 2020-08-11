@@ -4,6 +4,8 @@
     height: 100vh;
     align-items: center;
     justify-content: space-around;
+
+  
 }
 
 #page-login .login__description {
@@ -15,6 +17,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    background-image: url('../../assets/images/success-background.svg');
+    background-repeat: repeat-y;
+    background-size: contain;
+    background-position: center center;
 }
 #page-login .login__description h2 {
     margin-top: 2rem;

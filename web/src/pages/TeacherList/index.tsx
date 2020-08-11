@@ -1,7 +1,9 @@
-import React, { useState, FormEvent } from 'react';
+import React, { useState, FormEvent, useEffect } from 'react';
 import PageHeader from '../../components/PageHeader';
 
 import './styles.css';
+
+import smileIcon from '../../assets/images/icons/smile.svg';
 
 import TeacherItem, { Teacher } from '../../components/TeacherItem';
 import Input from '../../components/Input';
@@ -11,10 +13,19 @@ import api from '../../services/api';
 function TeacherList() {
 
     const [teachers, setTeachers] = useState([]);
+    const [allTeachers, setAllTeachers] = useState(0);
 
     const [subject, setSubject] = useState('');
     const [week_day, setWeekDay] = useState('');
     const [time, setTime] = useState('');
+
+
+    useEffect(() => {
+        api.get('users').then(response => {
+            const { total } = response.data;
+            setAllTeachers(total);
+        })
+    }, []);
 
     async function seachTeachers(e: FormEvent) {
         e.preventDefault();
@@ -33,7 +44,12 @@ function TeacherList() {
 
     return (
         <div id="page-teacher-list" className="container">
-            <PageHeader title="Estes são os proffys disponíveis" headerTitle="Estudar">
+            <PageHeader 
+                title="Estes são os proffys disponíveis" 
+                headerTitle="Estudar"
+                descriptionIcon={smileIcon}
+                descriptionIconMessage={`Nós temos ${allTeachers} professores.`}
+            >
 
                 <form id="search-teachers" onSubmit={seachTeachers}>
 
@@ -86,6 +102,9 @@ function TeacherList() {
 
             <main>
                 {
+                
+                teachers.length === undefined ? 'Nenhum professor encontrado com sua pesquisa'
+                : 
 
                 teachers.map((teacher: Teacher) => {
                     return <TeacherItem key={teacher.id} teacher={teacher} />

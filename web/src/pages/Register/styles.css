@@ -8,6 +8,12 @@
 
 #page-register .register__description {
     background-color: var(--color-primary);
+
+    background-image: url('../../assets/images/success-background.svg');
+    background-repeat: repeat-y;
+    background-size: contain;
+    background-position: center center;
+
     color: #fff;
     flex: 1;
     height: 100vh;
