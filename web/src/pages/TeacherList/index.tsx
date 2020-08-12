@@ -19,7 +19,6 @@ function TeacherList() {
     const [week_day, setWeekDay] = useState('');
     const [time, setTime] = useState('');
 
-
     useEffect(() => {
         api.get('users').then(response => {
             const { total } = response.data;
@@ -37,6 +36,9 @@ function TeacherList() {
                 time,
             }
         });
+
+        console.log("proff", response.data)
+        console.log("schedule", response.data.schedule);
 
         setTeachers(response.data);
 
@@ -88,7 +90,7 @@ function TeacherList() {
                    <Input 
                         type="time" 
                         name="time" 
-                        label="Hora"
+                        label="Horário"
                         value={time}
                         onChange={(e) => setTime(e.target.value)}
                     />
@@ -103,12 +105,13 @@ function TeacherList() {
             <main>
                 {
                 
-                teachers.length === undefined ? 'Nenhum professor encontrado com sua pesquisa'
-                : 
-
-                teachers.map((teacher: Teacher) => {
+                teachers.length === 0 
+                
+                ? <div className="search-message-results">Nenhum professor encontrado com sua pesquisa</div>
+               
+                : teachers.map((teacher: Teacher) => {
                     return <TeacherItem key={teacher.id} teacher={teacher} />
-                })
+                   })
 
                 }
                 

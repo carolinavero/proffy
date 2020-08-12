@@ -58,8 +58,14 @@
 
     #page-teacher-list main {
         padding: 3.2rem 0;
-        max-width: 740px;
+        max-width: 800px;
         margin: 0 auto;
+    }
+    #page-teacher-list .search-message-results {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 50vh;
     }
 
 }

@@ -115,6 +115,7 @@
         justify-content: space-between;
         height: 70vh;
         width: 80vw;
+        max-width: 1100px;
     }
     #page-landing-content .page-landing__actions {
         display: flex;
@@ -126,20 +127,18 @@
         height: 30vh;
         color: var(--color-primary);
     }
-
     #page-landing-content .page-landing__actions .page-landing__actions-content {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
         width: 80vw;
+        max-width: 1100px;
     }
     .page-landing__actions .welcome-message {
         font-size: 2rem;
         line-height: 3rem;
     }
-
-
     .logo-container {
         align-self: center;
         margin: 0;
@@ -151,7 +150,6 @@
     }
     #logo-container img {
         height: 12rem;
-        
     }
     .hero-image{
       justify-self: end;
