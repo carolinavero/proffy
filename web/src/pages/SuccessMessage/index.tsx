@@ -5,8 +5,19 @@ import successIcon from '../../assets/images/icons/success-check-icon.svg';
 
 import './styles.css';
 
-function SuccessMessage() {
-   
+export interface SuccessMessageItem {
+    title: string;
+    description: string;
+}
+
+interface SuccessMessageProps {
+    message: SuccessMessageItem;
+}
+
+const SuccessMessage: React.FC<SuccessMessageProps> = ({ message }) => {
+
+  
+
     return (
         <div id="page-success-message">
 
@@ -14,9 +25,8 @@ function SuccessMessage() {
                 <div className="password__description__content">
                     <main>
                         <img src={successIcon} alt="Redefinição enviada"/>
-                        <h1>Redefinição enviada</h1>
-                        <p>Boa, agora é só checar o e-mail que foi enviado para você redefinir sua senha 
-                            e aproveitar os estudos.</p>
+                        {/* <h1>{message.title}</h1>
+                        <p>{message}</p> */}
  
                         <Link to="/login">
                             Voltar ao login
@@ -25,9 +35,6 @@ function SuccessMessage() {
                     </main>
                 </div>
             </div>
-
-
-
 
         </div>
     )

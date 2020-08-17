@@ -13,6 +13,8 @@ function ForgotPassword() {
     
     function handleSubmit() {
         console.log("submit register");
+
+        const message = 'Boa, agora é só checar o e-mail que foi enviado para você redefinir sua senha e aproveitar os estudos.'
     }
     return (
         <div id="page-register">

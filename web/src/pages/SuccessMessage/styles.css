@@ -20,9 +20,13 @@
     justify-content: center;
     align-items: center;
 }
-#page-success-message .password__description p{
+#page-success-message .password__description p {
     margin-top: 2rem;
     max-width: 60rem;
+}
+#page-success-message .password__description h1 {
+    font-size: 5rem;
+    margin-top: 5rem;
 }
 
 #page-success-message main {

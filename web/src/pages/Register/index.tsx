@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
+import { Link, useHistory } from 'react-router-dom';
+
 import Input from '../../components/Input';
 
 import logoImg from '../../assets/images/logo-proffy.svg';
-import pinkHeartIcon from '../../assets/images/icons/pink-heart.svg';
+import backIcon from '../../assets/images/icons/back.svg';
 
 import './styles.css';
-import { Link } from 'react-router-dom';
+
 
 function Register() {
 
@@ -15,13 +17,30 @@ function Register() {
     const [password, setPassword] = useState('');
     const [remember, setRemember] = useState('');
 
+    const history = useHistory();
+
     function handleSubmit() {
         console.log("submit register");
+
+        history.push({
+            pathname: '/success-message',
+            state: {
+                title: "Sucesso!",
+                description: "Cadastro ok",
+            }
+        });        
+        
     }
     return (
         <div id="page-register">
 
-            
+            <div className="top-bar">
+                <div className="top-bar-container">
+                    <Link to="/login">
+                        <img src={backIcon} alt="Voltar" />
+                    </Link>
+                </div>
+            </div>
 
             <div className="register__form">
 
@@ -66,18 +85,6 @@ function Register() {
                         </footer>
                     </form>
 
-                    <div className="footer__info">
-                        <p>
-                            Já tem conta? <br></br>
-                            <Link to="/login">
-                                Fazer login
-                            </Link>
-                        </p>
-                        <p>
-                            É de graça <img src={pinkHeartIcon} alt="Coração rosa" />
-                        </p>
-                    </div>
-
                 </main>
             </div>
 
@@ -87,9 +94,6 @@ function Register() {
                     <h2>Sua plataforma de estudos online</h2>
                 </div>
             </div>
-
-
-
 
         </div>
     )
